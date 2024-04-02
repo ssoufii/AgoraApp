@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   section: {
     marginTop: 11,
-    maxWidth: '100%', // Ensure the section takes the full width
+    maxWidth: '100%', 
   },
   text2xl: {
     fontSize: 20, // Adjust as needed
