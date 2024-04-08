@@ -43,13 +43,18 @@ const MyComponent = () => {
   return (
     
     <SafeAreaView style={styles.container}>
-      <View style={styles.section}>
+      
+      <View style={[styles.section, styles.Words]}>
         <TextComponent text="AGORA WORK" style={styles.text2xl} />
         <TextComponent text="WORK FROM ANYWHERE" style={styles.text5xl} /> 
       </View>
       {/* Wrap Log_Sign_Page inside another View */}
       <View style={styles.login}>
         <Log_Sign_Page />
+      </View>
+
+      <View style={[styles.section, styles.bottomWords]}>
+        <TextComponent text="WORKING FROM HOME NOT WORKING OUT? BOOK A CO-WORKING SPACE OR PRIVATE OFFICE" style={styles.text2xl} /> 
       </View>
     </SafeAreaView>
   );
@@ -61,10 +66,27 @@ const styles = StyleSheet.create({
     backgroundColor: 'dodgerblue',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    borderWidth: 2,
-    borderColor: 'red',
+    //borderWidth: 1,
+    //borderColor: 'red',
+    gap: -200,
+    
 
   },
+  Words: {
+    transform: [{translateY:-80}], 
+    width: 300,
+    height: 300,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    //borderWidth: 2,
+    //borderColor: 'red',
+  },
+  bottomWords: {
+    borderColor: 'red',
+    borderWidth: 2,
+    height: 200,
+  },
+
   section: {
     marginTop: 11,
     maxWidth: '100%', 
@@ -88,8 +110,9 @@ const styles = StyleSheet.create({
     width: 150,
     height: 40,
     justifyContent: 'center',
-    paddingVertical: 10,
-    paddingHorizontal: 42,
+    //paddingVertical: 10,
+    //paddingHorizontal: 42,
+    marginHorizontal: 5,
   },
   button2: {
     fontFamily: 'sans-serif', // Font family is applied in Text component in React Native
@@ -98,8 +121,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 40,
     justifyContent: 'center',
-    paddingVertical: 10,
-    paddingHorizontal: 42,
+    marginHorizontal: 5,
   },
   buttonText: {
     color: 'white',
@@ -108,6 +130,8 @@ const styles = StyleSheet.create({
 
 
   login: {
+    transform: [{translateY:-50}], 
+    //paddingHorizontal: 10,
     height: 300,
     width: 200,
     // transform: [{translateY:-250}],
@@ -119,13 +143,12 @@ const styles = StyleSheet.create({
     
 
     alignItems: 'center',
-    justifyContent: 'center', // Align the button to the bottom of the container
+    justifyContent: 'space-evenly', // Align the button to the bottom of the container
+    flexDirection: 'column',
   },
 });
 
-
-
-export default function App() {
+export default function App(){
   //brings out terminal message whenever app executes
   //one of the ways to debug
   console.log("App Executed Successfully")
@@ -135,12 +158,6 @@ export default function App() {
   return (
     //removed View for SafeAreaView to avoid notch
     //<Image source={require('./assets/icon.png')}/>
-    
       <MyComponent />
-    
-
-    
-  );
-}
-
-
+  )
+};
