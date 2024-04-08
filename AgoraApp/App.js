@@ -43,7 +43,10 @@ const MyComponent = () => {
   return (
     
     <SafeAreaView style={styles.container}>
-      
+      <View style={styles.imageContainer}>
+        {/* Display the image */}
+        <Image source={require('./images/Agorawork.png')} style={styles.image} />
+      </View>
       <View style={[styles.section, styles.Words]}>
         <TextComponent text="AGORA WORK" style={styles.text2xl} />
         <TextComponent text="WORK FROM ANYWHERE" style={styles.text5xl} /> 
@@ -67,25 +70,37 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     gap: -200,
-
-
-    //borderWidth: 1,
-    //borderColor: 'red',
-    
-
   },
+
+  imageContainer: {
+    borderRadius: 100, // Half of the width (or height) to make it a circle
+    position: 'absolute', //crucial + next 2
+    top: 100, //all the way to the top then adjust as needed
+    left: 50, //all the way to the left then adjust as needed
+    //padding: 10, // Adjust padding as needed
+    
+    width: 50,
+    height: 50,
+    overflow: 'hidden',
+  },
+  image: {
+    width: '100%', // Adjust width as needed
+    height: '100%', // Adjust height as needed
+  },
+
   Words: {
-    transform: [{translateY:-80}], 
+    transform: [{translateY:-100}], 
     width: 300,
     height: 300,
     justifyContent: 'space-evenly',
     alignItems: 'center',
+    //borderWidth: 2,
+    //borderColor: 'red',
   },
   bottomWords: {
+    transform: [{translateY:-120}],
     flex: 0.2,
     justifyContent: "flex-wrap",
-    borderColor: 'red',
-    borderWidth: 2,
     height: 200,
     justifyContent: 'center',
     alignItems: 'center',
@@ -132,7 +147,7 @@ const styles = StyleSheet.create({
 
 
   login: {
-    transform: [{translateY:-40}], 
+    transform: [{translateY:-80}], 
     height: 300,
     width: 200,
     alignItems: 'center',
