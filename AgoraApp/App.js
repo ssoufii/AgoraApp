@@ -28,7 +28,7 @@ function Log_Sign_Page() { //displaying every button click
   };
   return (
     <View style={[styles.login]}>
-      <Button onPress={handleLogin}>LOGIN</Button>
+      <Button onPress={handleLogin}>LOGiN</Button>
       <Button2 onPress={handleLogin}>SIGN UP</Button2>
     </View>
   );
