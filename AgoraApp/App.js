@@ -63,12 +63,14 @@ const MyComponent = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'dodgerblue',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'space-evenly',
+    gap: -200,
+
+
     //borderWidth: 1,
     //borderColor: 'red',
-    gap: -200,
     
 
   },
@@ -78,13 +80,15 @@ const styles = StyleSheet.create({
     height: 300,
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    //borderWidth: 2,
-    //borderColor: 'red',
   },
   bottomWords: {
+    flex: 0.2,
+    justifyContent: "flex-wrap",
     borderColor: 'red',
     borderWidth: 2,
     height: 200,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   section: {
@@ -92,12 +96,12 @@ const styles = StyleSheet.create({
     maxWidth: '100%', 
   },
   text2xl: {
-    fontSize: 20, // Adjust as needed
-    fontWeight: '600', // Adjust as needed
+    fontSize: 20, 
+    fontWeight: '600', 
   },
   text5xl: {
-    fontSize: 50, // Adjust as needed
-    fontWeight: '300', // Adjust as needed
+    fontSize: 50, 
+    fontWeight: '300', 
   },
   text3: {
     fontSize: 100,
@@ -110,9 +114,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 40,
     justifyContent: 'center',
-    //paddingVertical: 10,
-    //paddingHorizontal: 42,
-    marginHorizontal: 5,
+    marginVertical: 1,
   },
   button2: {
     fontFamily: 'sans-serif', // Font family is applied in Text component in React Native
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 40,
     justifyContent: 'center',
-    marginHorizontal: 5,
+    marginVertical: -90,
   },
   buttonText: {
     color: 'white',
@@ -130,21 +132,14 @@ const styles = StyleSheet.create({
 
 
   login: {
-    transform: [{translateY:-50}], 
-    //paddingHorizontal: 10,
+    transform: [{translateY:-40}], 
     height: 300,
     width: 200,
-    // transform: [{translateY:-250}],
-    // //marginBottom: 20, // Add marginBottom to create space between the button and other content
-    // marginBottom: 0,
-    // marginTop:0,
-    borderWidth: 2,
-    borderColor: 'green',
-    
-
     alignItems: 'center',
     justifyContent: 'space-evenly', // Align the button to the bottom of the container
     flexDirection: 'column',
+    // borderWidth: 2,
+    // borderColor: 'green',
   },
 });
 
