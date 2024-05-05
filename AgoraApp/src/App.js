@@ -49,7 +49,7 @@ const MyComponent = () => {
       </View>
       <View style={[styles.section, styles.Words]}>
         <TextComponent text="AGORA WORK" style={styles.text2xl} />
-        <TextComponent text="WORK FROM ANYWHERE" style={styles.text5xl} /> 
+        <TextComponent text="WORK FROM AeNYWHERE" style={styles.text5xl} /> 
       </View>
       {/* Wrap Log_Sign_Page inside another View */}
       <View style={styles.login}>

@@ -8,6 +8,7 @@ function SignUpScreen(props) {
         </div>
     );
 }
+
 const MyComponent = () => {
     return (
       
