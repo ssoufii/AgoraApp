@@ -1,23 +1,14 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
 
-// Button component specific to HomeScreen
-const Button = ({ children, onPress }) => {
-  return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
-      <Text style={styles.buttonText}>{children}</Text>
-    </TouchableOpacity>
-  );
-};
-
-// Button2 component specific to HomeScreen
-const Button2 = ({ children, onPress }) => {
-  return (
-    <TouchableOpacity style={styles.button2} onPress={onPress}>
-      <Text style={styles.buttonText}>{children}</Text>
-    </TouchableOpacity>
-  );
-};
+// Button component specific to HomeScreen, used for signup and login 
+const Button = ({ children, onPress, style, textStyle }) => {
+    return (
+      <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
+        <Text style={[styles.buttonText, textStyle]}>{children}</Text>
+      </TouchableOpacity>
+    );
+  };
 
 // TextComponent specific to HomeScreen
 const TextComponent = ({ text, style }) => {
@@ -26,16 +17,22 @@ const TextComponent = ({ text, style }) => {
 
 // LogSignPage component specific to HomeScreen
 const LogSignPage = () => {
-  const handleLogin = () => {
-    console.log("Login button pressed");
-  };
+    const handleLogin = () => {
+      console.log("Login button pressed");
+    };
+  
+    const handleSignup = () => {
+      console.log("Signup button pressed");
+    };
 
-  return (
-    <View style={styles.login}>
-      <Button onPress={handleLogin}>LOGIN</Button>
-      <Button2 onPress={handleLogin}>SIGN UP</Button2>
-    </View>
-  );
+    //in this return, we use one general button component because signUp and logIn are similiar structure
+    //but they now output different things to the console
+    return (
+        <View style={styles.login}>
+          <Button onPress={handleLogin} style={styles.loginButton}>LOGIN</Button>
+          <Button onPress={handleSignup} style={styles.signupButton}>SIGN UP</Button> 
+        </View>
+      );
 };
 
 const HomeScreen = () => {
@@ -102,24 +99,22 @@ const styles = StyleSheet.create({
   },
   button: {
     borderRadius: 10,
-    backgroundColor: '#cdbf8d',
     width: 150,
     height: 40,
     justifyContent: 'center',
     marginVertical: 1,
   },
-  button2: {
-    borderRadius: 10,
-    backgroundColor: 'black',
-    width: 150,
-    height: 40,
-    justifyContent: 'center',
-    marginVertical: -90,
-  },
+  loginButton:{
+        backgroundColor: '#cdbf8d',
+      },
+  signupButton: {
+        backgroundColor: 'black',
+      },
   buttonText: {
     color: 'white',
     textAlign: 'center',
   },
+
   login: {
     transform: [{translateY: -80}],
     height: 300,
