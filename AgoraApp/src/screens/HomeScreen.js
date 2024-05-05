@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
 
-// Button component specific to HomeScreen, used for signup and login 
+// Button component specific to HomeScreen, used for signup and login --> used to be Button and Button2, now simplified
 const Button = ({ children, onPress, style, textStyle }) => {
     return (
       <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
