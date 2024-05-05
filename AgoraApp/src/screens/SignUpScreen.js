@@ -1,11 +1,17 @@
 //firstly, imports
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Button} from 'react-native';
 
-const SignupScreen = () => { //component creation
+const SignupScreen = ({navigation}) => { //component creation
 
   return (
-    <View style = {styles.container}></View>
+    <View style = {styles.container}>
+    <Button
+        title="Back to Home"
+        onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+        color="white"
+      />
+    </View>
   
   );
 };
@@ -17,6 +23,8 @@ const styles = StyleSheet.create({
   //encompasses whole screen as container
   container: {
     flex: 1, // fills whole screen with no padding
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: "blue",
   }
 });
