@@ -16,14 +16,15 @@ const TextComponent = ({ text, style }) => {
 };
 
 // LogSignPage component specific to HomeScreen
-const LogSignPage = () => {
+const LogSignPage = ({navigation}) => {
     const handleLogin = () => {
       console.log("Login button pressed");
-      navigation.navigate('Signup') //navigates to signup screen
     };
   
     const handleSignup = () => {
       console.log("Signup button pressed");
+      navigation.navigate('Signup') //navigates to signup screen
+
     };
 
     //in this return, we use one general button component because signUp and logIn are similiar structure
