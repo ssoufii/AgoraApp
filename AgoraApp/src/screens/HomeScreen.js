@@ -19,6 +19,7 @@ const TextComponent = ({ text, style }) => {
 const LogSignPage = () => {
     const handleLogin = () => {
       console.log("Login button pressed");
+      navigation.navigate('Signup') //navigates to signup screen
     };
   
     const handleSignup = () => {
@@ -35,7 +36,7 @@ const LogSignPage = () => {
       );
 };
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.imageContainer}>
@@ -46,7 +47,7 @@ const HomeScreen = () => {
         <TextComponent text="WORK FROM ANYWHERE" style={styles.text5xl} /> 
       </View>
       <View style={styles.login}>
-        <LogSignPage />
+        <LogSignPage navigation={navigation} />
       </View>
       <View style={[styles.section, styles.bottomWords]}>
         <TextComponent text="WORKING FROM HOME NOT WORKING OUT? BOOK A CO-WORKING SPACE OR PRIVATE OFFICE" style={styles.text2xl} /> 
