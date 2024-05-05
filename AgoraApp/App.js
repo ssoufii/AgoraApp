@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 //Screen Imports that will be nagivated through Via App.js
 import HomeScreen from './src/screens/HomeScreen';
 import SignupScreen from './src/screens/SignUpScreen';
+import LoginScreen from './src/screens/LoginScreen';
+
 
 //Acts as a navigation controller for rest of screens
 
@@ -19,6 +21,7 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false }}/> 
+        <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}/> 
       </Stack.Navigator>
     </NavigationContainer>
   );

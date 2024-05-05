@@ -19,6 +19,7 @@ const TextComponent = ({ text, style }) => {
 const LogSignPage = ({navigation}) => {
     const handleLogin = () => {
       console.log("Login button pressed");
+      navigation.navigate('Login') //navigates to signup screen
     };
   
     const handleSignup = () => {
