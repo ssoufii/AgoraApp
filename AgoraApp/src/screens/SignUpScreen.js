@@ -4,7 +4,7 @@ import {View, StyleSheet, Button, TextInput} from 'react-native';
 
 const SignupScreen = ({navigation}) => { //component creation
 
-    const [name, setName] = React.useState('');
+    const [name, setName] = React.useState(''); //name is current state and setName is a function that allows you to update that state
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
 
@@ -12,13 +12,28 @@ const SignupScreen = ({navigation}) => { //component creation
     <View style = {styles.container}>
     <TextInput
         style={styles.lol}
-        placeholder="Name"
-        value={name}
-        onChangeText={setName}
+        placeholder="Name" //This is what give the grey placaeholder "Name" in the box
+        value={name} // start value
+        onChangeText={setName} //changed to setName aka what the user types in
         autoCapitalize="words"
       />
+    <TextInput
+        style={styles.lol}
+        placeholder="Email"
+        value={email}
+        onChangeText={setEmail}
+        keyboardType="email-address"
+        autoCapitalize="none"
+      />
 
-
+    <TextInput
+        style={styles.lol}
+        placeholder="Password"
+        value={password}
+        onChangeText={setPassword}
+        secureTextEntry={true} //secureTextEntry = {true}
+        autoCapitalize="none"
+    />
 
     <Button
         title="Back to Home"
@@ -44,7 +59,7 @@ const styles = StyleSheet.create({
 
   lol: {
   height: 40,
-  marginVertical: 10,
+  marginVertical: 25,
   marginHorizontal: 20,
   borderWidth: 1,
   padding: 10,
