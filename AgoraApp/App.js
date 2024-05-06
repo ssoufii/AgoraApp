@@ -7,7 +7,6 @@ import HomeScreen from './src/screens/HomeScreen';
 import SignupScreen from './src/screens/SignUpScreen';
 import LoginScreen from './src/screens/LoginScreen';
 
-
 //Acts as a navigation controller for rest of screens
 
 const Stack = createStackNavigator();
