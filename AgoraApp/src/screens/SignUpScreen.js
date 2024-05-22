@@ -1,6 +1,38 @@
 //firstly, imports
 import React from 'react';
-import {View, StyleSheet, Button, TextInput} from 'react-native';
+import {View, StyleSheet, Button, TextInput, TouchableOpacity, Text} from 'react-native';
+
+
+// Define the TextComponent component
+const TextComponent = ({ text, style }) => {
+  return <Text style={style}>{text}</Text>;
+};
+
+// Define the CustomButton component
+const CustomButton = ({ children, onPress, style, textStyle }) => {
+  return (
+    <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
+      <Text style={[styles.buttonText, textStyle]}>{children}</Text>
+    </TouchableOpacity>
+  );
+};
+
+// Define the LoginPageReNavigation component
+const LoginPageReNavigation = ({ navigation }) => {
+  const handleLogin = () => {
+    console.log("Login button on Signup Page pressed");
+    navigation.navigate('Login'); // Navigate to the Login screen
+  };
+
+  return (
+    <CustomButton onPress={handleLogin} style={styles.loginButton}>
+      LOGIN
+    </CustomButton>
+  );
+};
+
+
+
 
 const SignupScreen = ({navigation}) => { //component creation
 
@@ -10,36 +42,54 @@ const SignupScreen = ({navigation}) => { //component creation
 
   return (
     <View style = {styles.container}>
-    <TextInput
-        style={styles.lol}
-        placeholder="Name" //This is what give the grey placaeholder "Name" in the box
-        value={name} // start value
-        onChangeText={setName} //changed to setName aka what the user types in
-        autoCapitalize="words"
-      />
-    <TextInput
-        style={styles.lol}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        keyboardType="email-address"
-        autoCapitalize="none"
-      />
+      <View style = {styles.headerContainer}>
 
-    <TextInput
-        style={styles.lol}
-        placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry={true} //secureTextEntry = {true}
-        autoCapitalize="none"
-    />
+          <TextComponent text="Sign Up Page" style={styles.headerText} />
 
-    <Button
-        title="Back to Home"
-        onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
-        color="white"
-      />
+          <Button
+            title="LOGIN"
+            onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+            color="purple"
+          />
+
+      </View>
+
+      <View style = {styles.middleContainer}>
+        <TextInput
+            style={styles.lol}
+            placeholder="Name" //This is what give the grey placaeholder "Name" in the box
+            value={name} // start value
+            onChangeText={setName} //changed to setName aka what the user types in
+            autoCapitalize="words"
+          />
+        <TextInput
+            style={styles.lol}
+            placeholder="Email"
+            value={email}
+            onChangeText={setEmail}
+            keyboardType="email-address"
+            autoCapitalize="none"
+          />
+
+        <TextInput
+            style={styles.lol}
+            placeholder="Password"
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry={true} //secureTextEntry = {true}
+            autoCapitalize="none"
+        />
+      </View>
+
+      <View style = {styles.bottomContainer}>
+        <Button
+              title="Sign Up!"
+              onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+              color="black"
+            />
+      </View>
+
+
     </View>
   
   );
