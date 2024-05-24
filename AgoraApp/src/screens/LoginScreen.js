@@ -7,7 +7,7 @@ const TextComponent = ({ text, style }) => {
   return <Text style={style}>{text}</Text>;
 };
 
-// Define the CustomButton component
+// This is for like the actual bigger real button.
 const CustomButton = ({ children, onPress, style, textStyle }) => {
   return (
     <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
@@ -76,7 +76,7 @@ return (
     </View>
 
     <View style={styles.bottomContainer}>
-        <CustomButton onPress={() => navigation.navigate('Landing')} style={styles.signUpButton}>
+        <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
           Login!
         </CustomButton>
       </View>
