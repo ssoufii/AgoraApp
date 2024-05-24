@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     borderRadius: 13,
   },
   signUpButton: {
-    width: '80%',
+    width: '70%',
     justifyContent: 'center',
     alignItems: 'center',
   },

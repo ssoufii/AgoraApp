@@ -24,7 +24,7 @@ const SignupPageReNavigation = ({ navigation }) => {
   };
 
   return (
-    <CustomButton onPress={handleSignup} style={styles.SignupButton}>
+    <CustomButton onPress={handleSignup} style={styles.LoginButton}>
       Sign Up
     </CustomButton>
   );
@@ -75,13 +75,11 @@ return (
       />
     </View>
 
-    <View style = {styles.bottomContainer}>
-      <Button styles = {styles.bottomButton}
-            title="Log In!"
-            onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
-            color="black"
-        />
-    </View>
+    <View style={styles.bottomContainer}>
+        <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
+          Login!
+        </CustomButton>
+      </View>
 
 
   </View>
@@ -107,8 +105,6 @@ const styles = StyleSheet.create({
     // borderColor: "white",
     paddingHorizontal: 10,
     marginTop: 180,  // moves the whole box up and down with it
-    
-
   },
 
   middleContainer: {
@@ -117,9 +113,7 @@ const styles = StyleSheet.create({
     // borderColor: "white",
     alignItems: 'center',
     marginVertical: 80, // control space between this box and above box
-
   },
-
   bottomContainer: {
     // borderWidth: 1,
     // borderColor: "white",
@@ -127,6 +121,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,  // control space between this box and above box
     // these last two styles erase need for justify-content and align-items
     marginTop: -15,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   // Style for the header text
   headerText: {
@@ -145,13 +141,36 @@ const styles = StyleSheet.create({
   borderColor: 'gray'
   },
 
-  SignupButton: {
+  LoginButton: {
     backgroundColor: 'white',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 5,
     marginLeft: 10,
   },
+
+  button: {
+    backgroundColor: 'black',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 13,
+  },
+  signUpButton: {
+    width: '70%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+
+  closeButtonText: {
+    fontSize: 30,
+    color: 'black',
+  },
+
 
 });
 
