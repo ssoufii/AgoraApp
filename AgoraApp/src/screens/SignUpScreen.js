@@ -86,7 +86,7 @@ const SignupScreen = ({navigation}) => { //component creation
       </View>
 
       <View style={styles.bottomContainer}>
-        <CustomButton onPress={() => navigation.navigate('Landing')} style={styles.signUpButton}>
+        <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
           Sign Up!
         </CustomButton>
       </View>
