@@ -85,12 +85,10 @@ const SignupScreen = ({navigation}) => { //component creation
         />
       </View>
 
-      <View style = {styles.bottomContainer}>
-        <Button styles = {styles.bottomButton}
-              title="Sign Up!"
-              onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
-              color="black"
-          />
+      <View style={styles.bottomContainer}>
+        <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
+          Sign Up!
+        </CustomButton>
       </View>
 
 
@@ -139,6 +137,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,  // control space between this box and above box
     // these last two styles erase need for justify-content and align-items
     marginTop: -15,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   // Style for the header text
   headerText: {
@@ -163,12 +163,27 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginLeft: 10,
   },
-
-  bottomButton: {
-    transform: [{translateY: 100}],
-
+  button: {
+    backgroundColor: 'black',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 13,
+  },
+  signUpButton: {
+    width: '80%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 
+  closeButtonText: {
+    fontSize: 30,
+    color: 'black',
+  },
 
 });
 
