@@ -45,7 +45,7 @@ const SignupScreen = ({navigation}) => { //component creation
       <View style = {styles.headerContainer}>
           <Button
             title="X         "
-            onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+            onPress={() => navigation.navigate('Landing')}  // Use the navigation.navigate method
             color="black"
           />
           <TextComponent text="Sign Up" style={styles.headerText} />
@@ -86,7 +86,7 @@ const SignupScreen = ({navigation}) => { //component creation
       </View>
 
       <View style={styles.bottomContainer}>
-        <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
+        <CustomButton onPress={() => navigation.navigate('Landing')} style={styles.signUpButton}>
           Sign Up!
         </CustomButton>
       </View>

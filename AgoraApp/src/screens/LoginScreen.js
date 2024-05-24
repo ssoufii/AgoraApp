@@ -41,7 +41,7 @@ return (
     <View style = {styles.headerContainer}>
         <Button
           title="X            "
-          onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+          onPress={() => navigation.navigate('Landing')}  // Use the navigation.navigate method
           color="black"
         />
         <TextComponent text="Login" style={styles.headerText} />
@@ -76,7 +76,7 @@ return (
     </View>
 
     <View style={styles.bottomContainer}>
-        <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
+        <CustomButton onPress={() => navigation.navigate('Landing')} style={styles.signUpButton}>
           Login!
         </CustomButton>
       </View>
