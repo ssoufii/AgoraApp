@@ -46,7 +46,7 @@ const SignupScreen = ({navigation}) => { //component creation
           <Button
             title="X         "
             onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
-            color="purple"
+            color="black"
           />
           <TextComponent text="Sign Up Page" style={styles.headerText} />
 
@@ -106,8 +106,6 @@ const styles = StyleSheet.create({
   //encompasses whole screen as container
   container: {
     flex: 1, // fills whole screen with no padding
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
     backgroundColor: "lightblue",
 
   },
@@ -117,21 +115,30 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     width: '100%',
     marginBottom: 20,
-    borderWidth: 1,
-    borderColor: "white",
+    // borderWidth: 1,
+    // borderColor: "white",
+    paddingHorizontal: 10,
+    marginTop: 180,  // moves the whole box up and down with it
+    
+
   },
 
   middleContainer: {
     width: '100%',
-    borderWidth: 1,
-    borderColor: "white",
+    // borderWidth: 1,
+    // borderColor: "white",
     alignItems: 'center',
+    marginVertical: 80, // control space between this box and above box
 
   },
 
   bottomContainer: {
-    borderWidth: 1,
-    borderColor: "white",
+    // borderWidth: 1,
+    // borderColor: "white",
+    marginBottom: 50,  // control space between this box and below box
+    marginVertical: 10,  // control space between this box and above box
+    // these last two styles erase need for justify-content and align-items
+    marginTop: -15,
   },
   // Style for the header text
   headerText: {
