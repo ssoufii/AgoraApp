@@ -48,11 +48,11 @@ const SignupScreen = ({navigation}) => { //component creation
             onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
             color="black"
           />
-          <TextComponent text="Sign Up Page" style={styles.headerText} />
+          <TextComponent text="Sign Up" style={styles.headerText} />
 
           <Button
             title="LOGIN"
-            onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+            onPress={() => navigation.navigate('Login')}  // Use the navigation.navigate method
             color="purple"
           />
 
