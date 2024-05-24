@@ -43,7 +43,11 @@ const SignupScreen = ({navigation}) => { //component creation
   return (
     <View style = {styles.container}>
       <View style = {styles.headerContainer}>
-
+          <Button
+            title="X         "
+            onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+            color="purple"
+          />
           <TextComponent text="Sign Up Page" style={styles.headerText} />
 
           <Button
@@ -82,11 +86,11 @@ const SignupScreen = ({navigation}) => { //component creation
       </View>
 
       <View style = {styles.bottomContainer}>
-        <Button
+        <Button styles = {styles.bottomButton}
               title="Sign Up!"
               onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
               color="black"
-            />
+          />
       </View>
 
 
@@ -102,11 +106,38 @@ const styles = StyleSheet.create({
   //encompasses whole screen as container
   container: {
     flex: 1, // fills whole screen with no padding
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
-    backgroundColor: "blue",
+    backgroundColor: "lightblue",
+
+  },
+  headerContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    width: '100%',
+    marginBottom: 20,
+    borderWidth: 1,
+    borderColor: "white",
   },
 
+  middleContainer: {
+    width: '100%',
+    borderWidth: 1,
+    borderColor: "white",
+    alignItems: 'center',
+
+  },
+
+  bottomContainer: {
+    borderWidth: 1,
+    borderColor: "white",
+  },
+  // Style for the header text
+  headerText: {
+    fontSize: 30,
+    fontWeight: '600',
+  },
   lol: {
   height: 40,
   marginVertical: 25,
@@ -117,6 +148,20 @@ const styles = StyleSheet.create({
   backgroundColor: 'white',
   borderColor: 'gray'
   },
+
+  loginButton: {
+    backgroundColor: 'white',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 5,
+    marginLeft: 10,
+  },
+
+  bottomButton: {
+    transform: [{translateY: 100}],
+
+  },
+
 
 });
 
