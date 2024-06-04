@@ -7,7 +7,7 @@ const TextComponent = ({ text, style }) => {
   return <Text style={style}>{text}</Text>;
 };
 
-// This is for like the actual bigger real button.
+// This is for like the actual bigger real button at the bottom of the screen.
 const CustomButton = ({ children, onPress, style, textStyle }) => {
   return (
     <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     marginBottom: 50,  // control space between this box and below box
     marginVertical: 10,  // control space between this box and above box
     // these last two styles erase need for justify-content and align-items
-    marginTop: -15,
+    marginTop: 75, // edited to be same place as on sign up page
     justifyContent: 'center',
     alignItems: 'center',
   },
