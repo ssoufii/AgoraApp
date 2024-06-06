@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Button, TextInput, TouchableOpacity, Text} from 'react-native';
+import {View, Image, StyleSheet, Button, TextInput, TouchableOpacity, Text} from 'react-native';
 
 const TextComponent = ({ text, style }) => {
     return <Text style={style}>{text}</Text>;
@@ -20,8 +20,19 @@ const HomeScreen = ({navigation}) => { //component creation
   
 return (
     <View style = {styles.container}>
+      
       <View style = {styles.firstContainer}>
-      <TextComponent text="Listings" style={styles.headerText} />
+        <Button
+            title="Menu"
+            onPress={() => navigation.navigate('Landing')}  // Use the navigation.navigate method
+            color="purple"
+        />
+        <TextComponent text="Listings" style={styles.headerText} />
+
+        <View style={styles.imageContainer}>
+            <Image source={require('./images/Agorawork.png')} style={styles.image} />
+         </View>
+
       </View>
   
       <View style = {styles.secondContainer}>
@@ -72,17 +83,16 @@ const styles = StyleSheet.create({
     firstContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-between',
         width: '100%',
-        //marginBottom: 20,
         borderWidth: 3,
         borderColor: "red",
         marginBottom: 20,
     // borderWidth: 1,
     // borderColor: "white",
-        paddingHorizontal: 10,
-        marginTop: 180,
-    },
+       paddingHorizontal: 10,
+       marginTop: -360, 
+       },
 
     headerText: {
         fontSize: 30,
@@ -128,6 +138,18 @@ const styles = StyleSheet.create({
         width: 300, // This is a wider width to accommodate longer text
         backgroundColor: 'white',
         borderColor: 'gray'
+    },
+
+    imageContainer: {
+      borderRadius: 100,
+      width: 50,
+      height: 50,
+      overflow: 'hidden',
+    },
+
+    image: {
+      width: '100%',
+      height: '100%',
     },
 })
 export default HomeScreen;
