@@ -21,9 +21,7 @@ const HomeScreen = ({navigation}) => { //component creation
 return (
     <View style = {styles.container}>
       <View style = {styles.firstContainer}>
-        <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
-            Login!
-          </CustomButton>
+      <TextComponent text="Listings" style={styles.headerText} />
       </View>
   
       <View style = {styles.secondContainer}>
@@ -73,12 +71,17 @@ const styles = StyleSheet.create({
     
     firstContainer: {
         flexDirection: 'row',
-        //alignItems: 'center',
-        //justifyContent: 'space-evenly',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
         width: '100%',
         //marginBottom: 20,
         borderWidth: 3,
         borderColor: "red",
+        marginBottom: 20,
+    // borderWidth: 1,
+    // borderColor: "white",
+        paddingHorizontal: 10,
+        marginTop: 180,
     },
 
     headerText: {
