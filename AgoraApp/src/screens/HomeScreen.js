@@ -38,7 +38,7 @@ return (
       <View style = {styles.secondContainer}>
        
         <TextInput
-            style={styles.lol}
+            style={styles.inputContainer}
             placeholder="Search" 
             value={search} 
             onChangeText={setSearch} 
@@ -85,13 +85,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '100%',
-        borderWidth: 3,
-        borderColor: "red",
-        marginBottom: 20,
+        //borderWidth: 3,
+        //borderColor: "red",
+        marginBottom: -70,
     // borderWidth: 1,
     // borderColor: "white",
        paddingHorizontal: 10,
-       marginTop: -360, 
+       marginTop: -400, 
        },
 
     headerText: {
@@ -101,8 +101,8 @@ const styles = StyleSheet.create({
 
     secondContainer: {
         width: '100%',
-        borderWidth: 1,
-        borderColor: "blue",
+        //borderWidth: 1,
+        //borderColor: "blue",
         alignItems: 'center',
         marginVertical: 80, // control space between this box and above box
     },
@@ -129,15 +129,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
 
-    lol: {
+    inputContainer: {
         height: 40,
         marginVertical: 25,
         marginHorizontal: 20,
         borderWidth: 1,
         padding: 10,
-        width: 300, // This is a wider width to accommodate longer text
+        width: 400 , // This is a wider width to accommodate longer text
         backgroundColor: 'white',
-        borderColor: 'gray'
+        borderColor: 'gray',
+        borderRadius: 20,
     },
 
     imageContainer: {
