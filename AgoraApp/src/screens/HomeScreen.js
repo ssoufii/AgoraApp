@@ -38,7 +38,7 @@ return (
       <View style = {styles.secondContainer}>
        
         <TextInput
-            style={styles.inputContainer}
+            style={styles.inputContainer} // inputContainer formally known as lol
             placeholder="Search" 
             value={search} 
             onChangeText={setSearch} 
@@ -48,18 +48,33 @@ return (
       </View>
   
       <View style={styles.thirdContainer}>
-          <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
-            Login!
-          </CustomButton>
+          <TextComponent text = "Near you"  style = {styles.above_pic_text}></TextComponent>
+
+          <Button
+            title="Filter"
+            onPress={() => navigation.navigate('Landing')}  // Use the navigation.navigate method
+            color="purple"
+        />
       </View>
 
       <View style={styles.fourthContainer}>
+        <TextComponent text = "Near you"  style = {styles.above_pic_text}></TextComponent>
+
+      </View>
+
+      <View style={styles.fifthContainer}>
           <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
             Login!
           </CustomButton>
       </View>
 
-      <View style={styles.fifthContainer}>
+      <View style={styles.sixthContainer}>
+          <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
+            Login!
+          </CustomButton>
+      </View>
+
+      <View style={styles.seventhContainer}>
           <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
             Login!
           </CustomButton>
@@ -71,7 +86,6 @@ return (
 );
 };
 
-
 const styles = StyleSheet.create({
 
     container: {
@@ -80,7 +94,7 @@ const styles = StyleSheet.create({
         //alignItems: 'center',
     },
     
-    firstContainer: {
+    firstContainer: { // top of screen header 
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -91,7 +105,7 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
     // borderColor: "white",
        paddingHorizontal: 10,
-       marginTop: -400, 
+       marginTop: -450, 
        },
 
     headerText: {
@@ -99,20 +113,25 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
 
-    secondContainer: {
+    secondContainer: { //stores search input box
         width: '100%',
         //borderWidth: 1,
         //borderColor: "blue",
         alignItems: 'center',
         marginVertical: 80, // control space between this box and above box
+        marginBottom: 0,
     },
 
 
-    thirdContainer: {
+    thirdContainer: { // stores "Near you" text
+        //flex: 1,
+        flexDirection: "row",
         borderWidth: 1,
         borderColor: "black",
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        //marginTop: 10,  // moves the whole box up and down with it
+
     },
 
     fourthContainer: {
@@ -128,6 +147,20 @@ const styles = StyleSheet.create({
         borderColor: "black",
         alignItems: 'center',
     },
+
+    sixthContainer: {
+      width: '100%',
+      borderWidth: 1,
+      borderColor: "black",
+      alignItems: 'center',
+    },
+
+    seventhContainer: {
+      width: '100%',
+      borderWidth: 1,
+      borderColor: "black",
+      alignItems: 'center',
+  },
 
     inputContainer: {
         height: 40,
@@ -152,5 +185,12 @@ const styles = StyleSheet.create({
       width: '100%',
       height: '100%',
     },
+
+    above_pic_text: {
+      
+      fontSize: 30,
+      fontWeight: '600',
+      
+    }
 })
 export default HomeScreen;
