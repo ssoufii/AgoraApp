@@ -94,11 +94,11 @@ const styles = StyleSheet.create({
   },
   text2xl: {
     fontSize: 20,
-    fontWeight: '600',
+    fontWeight: '700',
   },
   text5xl: {
     fontSize: 50,
-    fontWeight: '300',
+    fontWeight: '500',
   },
   button: {
     borderRadius: 10,

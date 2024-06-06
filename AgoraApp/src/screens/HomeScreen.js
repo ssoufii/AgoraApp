@@ -57,8 +57,20 @@ return (
         />
       </View>
 
-      <View style={styles.fourthContainer}>
-        <TextComponent text = "Near you"  style = {styles.above_pic_text}></TextComponent>
+
+
+      <View style={styles.fourthContainer}> 
+        <View style = {styles.listingPhotosContainer}>
+          <Image source={require('./images/PehonanBoardRoom.png')} style={styles.listingPhoto} />
+          <TextComponent text = "Pehonan Board Room"  style = {styles.descriptionWords}></TextComponent>
+          <TextComponent text = "$350.00"  style = {styles.costWords}></TextComponent>
+        </View>
+        <View style = {styles.listingPhotosContainer}>
+          <Image source={require('./images/PodcastVault.png')} style={styles.listingPhoto} />
+        </View>
+        <View style = {styles.listingPhotosContainer}>
+          <Image source={require('./images/HotDesk.png')} style={styles.listingPhoto} />
+        </View>
 
       </View>
 
@@ -105,7 +117,7 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
     // borderColor: "white",
        paddingHorizontal: 10,
-       marginTop: -450, 
+       marginTop: -400, 
        },
 
     headerText: {
@@ -127,22 +139,30 @@ const styles = StyleSheet.create({
     thirdContainer: { // stores "Near you" text
         //flex: 1,
         flexDirection: "row",
-        borderWidth: 1,
-        borderColor: "black",
+        // borderWidth: 1,
+        // borderColor: "black",
         justifyContent: 'space-between',
         alignItems: 'flex-start',
         //marginTop: 10,  // moves the whole box up and down with it
         marginHorizontal: 13,
     },
 
-    fourthContainer: {
+    fourthContainer: { //first row of pictures and prices
+        flexDirection: "row",
+        justifyContent: "space-between",
         width: '100%',
         borderWidth: 1,
         borderColor: "black",
         alignItems: 'center',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        //height: 175,
+      
     },
 
     fifthContainer: {
+        transform: [{translateY: 80}],
+
         width: '100%',
         borderWidth: 1,
         borderColor: "black",
@@ -150,6 +170,8 @@ const styles = StyleSheet.create({
     },
 
     sixthContainer: {
+      transform: [{translateY: 80}],
+
       width: '100%',
       borderWidth: 1,
       borderColor: "black",
@@ -157,6 +179,8 @@ const styles = StyleSheet.create({
     },
 
     seventhContainer: {
+      transform: [{translateY: 80}],
+
       width: '100%',
       borderWidth: 1,
       borderColor: "black",
@@ -175,6 +199,11 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
 
+    above_pic_text: { //this is the Near You text
+      fontSize: 30,
+      fontWeight: '450',
+    },
+    // The next few are all to do with the images
     imageContainer: {
       borderRadius: 100,
       width: 50,
@@ -187,11 +216,29 @@ const styles = StyleSheet.create({
       height: '100%',
     },
 
-    above_pic_text: {
-      
-      fontSize: 30,
-      fontWeight: '600',
-      
+    listingPhotosContainer: {
+      flexDirection: 'column',
+      width: 125,
+      height: 125,
+      //overflow: 'hidden',
+      paddingHorizontal: 5,
+    },
+
+    listingPhoto: {
+      width: 120,
+      height: 110,
+    },
+
+    descriptionWords: {
+      fontSize: 12,
+      fontWeight:'200', 
+    },
+
+    costWords: {
+      fontSize: 12,
+      fontWeight: '10',
     }
+
+
 })
 export default HomeScreen;
