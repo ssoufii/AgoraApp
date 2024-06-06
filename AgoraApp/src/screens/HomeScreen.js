@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginVertical: 80, // control space between this box and above box
         marginBottom: 0,
+        
     },
 
 
@@ -131,7 +132,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'flex-start',
         //marginTop: 10,  // moves the whole box up and down with it
-
+        marginHorizontal: 13,
     },
 
     fourthContainer: {
