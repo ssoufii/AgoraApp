@@ -67,10 +67,14 @@ return (
         </View>
         <View style = {styles.listingPhotosContainer}>
           <Image source={require('./images/PodcastVault.png')} style={styles.listingPhoto} />
+          <TextComponent text = "Podcast Vault"  style = {styles.descriptionWords}></TextComponent>
+          <TextComponent text = "$450.00"  style = {styles.costWords}></TextComponent>
         </View>
         <View style = {styles.listingPhotosContainer}>
           <Image source={require('./images/HotDesk.png')} style={styles.listingPhoto} />
-        </View>
+          <TextComponent text = "Hot Desk"  style = {styles.descriptionWords}></TextComponent>
+          <TextComponent text = "$35.00"  style = {styles.costWords}></TextComponent>      
+       </View>
 
       </View>
 
@@ -222,6 +226,7 @@ const styles = StyleSheet.create({
       height: 125,
       //overflow: 'hidden',
       paddingHorizontal: 5,
+      justifyContent: "space-between",
     },
 
     listingPhoto: {
@@ -231,7 +236,7 @@ const styles = StyleSheet.create({
 
     descriptionWords: {
       fontSize: 12,
-      fontWeight:'200', 
+      fontWeight:'5', 
     },
 
     costWords: {
