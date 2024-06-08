@@ -79,21 +79,44 @@ return (
       </View>
 
       <View style={styles.fifthContainer}>
-          <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
-            Login!
-          </CustomButton>
+        <TextComponent text = "Popular"  style = {styles.above_pic_text}></TextComponent>
       </View>
 
       <View style={styles.sixthContainer}>
-          <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
-            Login!
-          </CustomButton>
+      <View style = {styles.listingPhotosContainer}>
+          <Image source={require('./images/PehonanBoardRoom.png')} style={styles.listingPhoto} />
+          <TextComponent text = "Pehonan Board Room"  style = {styles.descriptionWords}></TextComponent>
+          <TextComponent text = "$350.00"  style = {styles.costWords}></TextComponent>
+        </View>
+        <View style = {styles.listingPhotosContainer}>
+          <Image source={require('./images/PodcastVault.png')} style={styles.listingPhoto} />
+          <TextComponent text = "Podcast Vault"  style = {styles.descriptionWords}></TextComponent>
+          <TextComponent text = "$40.00"  style = {styles.costWords}></TextComponent>
+        </View>
+        <View style = {styles.listingPhotosContainer}>
+          <Image source={require('./images/HotDesk.png')} style={styles.listingPhoto} />
+          <TextComponent text = "Hot Desk"  style = {styles.descriptionWords}></TextComponent>
+          <TextComponent text = "$35.00"  style = {styles.costWords}></TextComponent>      
+       </View>
       </View>
 
       <View style={styles.seventhContainer}>
-          <CustomButton onPress={() => navigation.navigate('Home')} style={styles.signUpButton}>
-            Login!
-          </CustomButton>
+        <View style = {styles.bottomIconContainer}> 
+          <Image source={require('./images/building.png')} style={styles.iconPhoto} />
+          <TextComponent text = "Home" style = {styles.iconWords}></TextComponent>
+
+        </View>
+
+        <View style = {styles.bottomIconContainer}> 
+          <Image source={require('./images/house.png')} style={styles.iconPhoto} />
+          <TextComponent text = "Listing" style = {styles.iconWords}></TextComponent>
+
+        </View>
+
+        <View style = {styles.ProfileContainer}> 
+          <Image source={require('./images/ProfilePicture.png')} style={styles.image} />
+          <TextComponent text = "Profile" style = {styles.iconWords}></TextComponent>
+        </View>
       </View>
   
   
@@ -101,6 +124,10 @@ return (
   
 );
 };
+
+
+
+//STYLING ************************************************************************************************************************************************************************************************************
 
 const styles = StyleSheet.create({
 
@@ -111,12 +138,11 @@ const styles = StyleSheet.create({
     },
     
     firstContainer: { // top of screen header 
+        transform: [{translateY: 80}],
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '100%',
-        //borderWidth: 3,
-        //borderColor: "red",
         marginBottom: -70,
     // borderWidth: 1,
     // borderColor: "white",
@@ -130,6 +156,7 @@ const styles = StyleSheet.create({
     },
 
     secondContainer: { //stores search input box
+        transform: [{translateY: 80}],
         width: '100%',
         //borderWidth: 1,
         //borderColor: "blue",
@@ -141,7 +168,8 @@ const styles = StyleSheet.create({
 
 
     thirdContainer: { // stores "Near you" text
-        //flex: 1,
+        
+        transform: [{translateY: 90}],
         flexDirection: "row",
         // borderWidth: 1,
         // borderColor: "black",
@@ -152,11 +180,13 @@ const styles = StyleSheet.create({
     },
 
     fourthContainer: { //first row of pictures and prices
+        transform: [{translateY: 90}],
+
         flexDirection: "row",
         justifyContent: "space-between",
         width: '100%',
-        borderWidth: 1,
-        borderColor: "black",
+        //borderWidth: 1,
+        //borderColor: "black",
         alignItems: 'center',
         paddingHorizontal: 10,
         paddingVertical: 5,
@@ -165,30 +195,42 @@ const styles = StyleSheet.create({
     },
 
     fifthContainer: {
-        transform: [{translateY: 80}],
+        transform: [{translateY: 190}],
 
-        width: '100%',
-        borderWidth: 1,
-        borderColor: "black",
-        alignItems: 'center',
+        flexDirection: "row",
+        // borderWidth: 1,
+        // borderColor: "black",
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        //marginTop: 10,  // moves the whole box up and down with it
+        marginHorizontal: 13,
     },
 
     sixthContainer: {
-      transform: [{translateY: 80}],
+      transform: [{translateY: 190}],
 
-      width: '100%',
-      borderWidth: 1,
-      borderColor: "black",
-      alignItems: 'center',
+      flexDirection: "row",
+        justifyContent: "space-between",
+        width: '100%',
+        //borderWidth: 1,
+        //borderColor: "black",
+        alignItems: 'center',
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        //height: 175,
+        marginBottom: -190
     },
 
     seventhContainer: {
-      transform: [{translateY: 80}],
-
+      flexDirection: 'row',
+      transform: [{translateY:490}],
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      height: 200,
       width: '100%',
       borderWidth: 1,
       borderColor: "black",
-      alignItems: 'center',
+      backgroundColor: "grey",
   },
 
     inputContainer: {
@@ -203,7 +245,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
 
-    above_pic_text: { //this is the Near You text
+    above_pic_text: { //this is the Near You/ Popular text
       fontSize: 30,
       fontWeight: '450',
     },
@@ -212,7 +254,7 @@ const styles = StyleSheet.create({
       borderRadius: 100,
       width: 50,
       height: 50,
-      overflow: 'hidden',
+      overflow: 'hidden', //allows circle to happen
     },
 
     image: {
@@ -227,6 +269,7 @@ const styles = StyleSheet.create({
       //overflow: 'hidden',
       paddingHorizontal: 5,
       justifyContent: "space-between",
+      //alignItems: "flex-end"
     },
 
     listingPhoto: {
@@ -242,7 +285,38 @@ const styles = StyleSheet.create({
     costWords: {
       fontSize: 12,
       fontWeight: '10',
-    }
+    },
+
+    bottomIconContainer: {
+      flexDirection: 'column', 
+      //transform: [{translateX: 10}],
+
+    },
+
+    iconPhoto: {
+      marginHorizontal: 30,// Add some space between the icons
+      height: 75,
+      width: 75,
+      // borderWidth: 1,
+      // borderColor: "black",
+    },
+
+    iconWords: {
+      marginTop: -15,
+      fontSize: 12,
+      fontWeight: '400',
+      textAlign: 'center',
+    },
+
+    ProfileContainer: {
+      flexDirection: 'column', 
+      transform: [{translateY: 20}],
+      borderRadius: 100,
+      width: 50,
+      height: 50,
+      overflow: 'hidden', //allows circle to happen
+      
+    },
 
 
 })
