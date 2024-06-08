@@ -218,19 +218,22 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical: 5,
         //height: 175,
-        marginBottom: -190
+        marginBottom: -160
     },
 
     seventhContainer: {
       flexDirection: 'row',
-      transform: [{translateY:490}],
-      justifyContent: 'center',
-      alignItems: 'flex-start',
-      height: 200,
+      transform: [{translateY:440}],
+      //transform: [{translateX:-20}],
+
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      height: 150,
       width: '100%',
-      borderWidth: 1,
-      borderColor: "black",
+      // borderWidth: 1,
+      // borderColor: "black",
       backgroundColor: "grey",
+      
   },
 
     inputContainer: {
@@ -289,8 +292,6 @@ const styles = StyleSheet.create({
 
     bottomIconContainer: {
       flexDirection: 'column', 
-      //transform: [{translateX: 10}],
-
     },
 
     iconPhoto: {
@@ -309,9 +310,10 @@ const styles = StyleSheet.create({
     },
 
     ProfileContainer: {
+      borderWidth: 1,
+      borderColor: "black",
       flexDirection: 'column', 
-      transform: [{translateY: 20}],
-      borderRadius: 100,
+      borderRadius: 0,
       width: 50,
       height: 50,
       overflow: 'hidden', //allows circle to happen
