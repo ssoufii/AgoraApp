@@ -52,7 +52,10 @@ const HomeScreen = ({navigation}) => {
         <LogSignPage navigation={navigation} />
       </View>
       <View style={[styles.section, styles.bottomWords]}>
-        <TextComponent text="WORKING FROM HOME NOT WORKING OUT? BOOK A CO-WORKING SPACE OR PRIVATE OFFICE" style={styles.text2xl} /> 
+      <TextComponent 
+       text="WORKING FROM HOME NOT WORKING OUT? BOOK A CO-WORKING SPACE OR PRIVATE OFFICE" 
+        style={[styles.text2xl, { textAlign: 'center' }]}  // Center align the text
+      /> 
       </View>
     </SafeAreaView>
   );
@@ -95,6 +98,7 @@ const styles = StyleSheet.create({
   text2xl: {
     fontSize: 20,
     fontWeight: '700',
+    paddingHorizontal: 3,
   },
   text5xl: {
     fontSize: 50,
@@ -106,12 +110,14 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     marginVertical: 1,
+    
   },
   loginButton:{
+        marginTop: 55,
         backgroundColor: '#cdbf8d',
       },
-  signupButton: {
-        backgroundColor: 'black',
+  signupButton: { 
+      backgroundColor: 'black',
       },
   buttonText: {
     color: 'white',

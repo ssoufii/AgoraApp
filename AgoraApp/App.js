@@ -9,6 +9,8 @@ import LoginScreen from './src/screens/LoginScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import IndividualListing from './src/screens/IndividualListing';
 import PaymentScreen from './src/screens/PaymentScreen';
+import ConfirmationScreen from './src/screens/Confirmation';
+
 //Acts as a navigation controller for rest of screens
 
 const Stack = createStackNavigator();
@@ -26,6 +28,7 @@ function App() {
         <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/> 
         <Stack.Screen name="IndividualListing" component={IndividualListing} options={{ headerShown: false }}/>
         <Stack.Screen name="Payment" component={PaymentScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="Confirmation" component={ConfirmationScreen} options={{ headerShown: false }}/>
 
       </Stack.Navigator>
     </NavigationContainer>
