@@ -104,19 +104,16 @@ const styles = StyleSheet.create({
   //encompasses whole screen as container
   container: {
     flex: 1, // fills whole screen with no padding
-    backgroundColor: "lightblue",
-
+    backgroundColor: "white",
   },
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     width: '100%',
     marginBottom: 20,
-    // borderWidth: 1,
-    // borderColor: "white",
     paddingHorizontal: 10,
-    marginTop: 180,  // moves the whole box up and down with it
+    marginTop: 140,  // moves the whole box up and down with it
     
 
   },
@@ -136,7 +133,7 @@ const styles = StyleSheet.create({
     marginBottom: 50,  // control space between this box and below box
     marginVertical: 10,  // control space between this box and above box
     // these last two styles erase need for justify-content and align-items
-    marginTop: -15,
+    marginTop: 75,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -152,8 +149,9 @@ const styles = StyleSheet.create({
   borderWidth: 1,
   padding: 10,
   width: 300, // This is a wider width to accommodate longer text
-  backgroundColor: 'white',
-  borderColor: 'gray'
+  backgroundColor: '#ECECEC',
+  borderColor: 'gray',
+  borderRadius: 5,
   },
 
   loginButton: {
@@ -189,3 +187,6 @@ const styles = StyleSheet.create({
 
 //After every screen, export it at the end so navigation can grab it from App.js
 export default SignupScreen; //name from first component made 
+
+
+

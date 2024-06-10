@@ -1,3 +1,5 @@
+
+
 //firstly, imports
 import React from 'react';
 import {View, StyleSheet, Button, TextInput, TouchableOpacity, Text} from 'react-native';
@@ -92,19 +94,18 @@ const styles = StyleSheet.create({
   //encompasses whole screen as container
   container: {
     flex: 1, // fills whole screen with no padding
-    backgroundColor: "lightblue",
-
+    backgroundColor: "white",
   },
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     width: '100%',
     marginBottom: 20,
-    // borderWidth: 1,
-    // borderColor: "white",
     paddingHorizontal: 10,
-    marginTop: 180,  // moves the whole box up and down with it
+    marginTop: 140,  // moves the whole box up and down with it
+    
+
   },
 
   middleContainer: {
@@ -113,14 +114,16 @@ const styles = StyleSheet.create({
     // borderColor: "white",
     alignItems: 'center',
     marginVertical: 80, // control space between this box and above box
+
   },
+
   bottomContainer: {
     // borderWidth: 1,
     // borderColor: "white",
     marginBottom: 50,  // control space between this box and below box
     marginVertical: 10,  // control space between this box and above box
     // these last two styles erase need for justify-content and align-items
-    marginTop: 75, // edited to be same place as on sign up page
+    marginTop: 165,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -129,7 +132,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: '600',
   },
-
   lol: {
   height: 40,
   marginVertical: 25,
@@ -137,18 +139,18 @@ const styles = StyleSheet.create({
   borderWidth: 1,
   padding: 10,
   width: 300, // This is a wider width to accommodate longer text
-  backgroundColor: 'white',
-  borderColor: 'gray'
+  backgroundColor: '#ECECEC',
+  borderColor: 'gray',
+  borderRadius: 5,
   },
 
-  LoginButton: {
+  loginButton: {
     backgroundColor: 'white',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 5,
     marginLeft: 10,
   },
-
   button: {
     backgroundColor: 'black',
     paddingVertical: 15,
@@ -170,7 +172,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: 'black',
   },
-
 
 });
 
