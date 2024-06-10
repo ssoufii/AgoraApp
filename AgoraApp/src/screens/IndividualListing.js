@@ -1,11 +1,17 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image, TextInput, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, Image, TextInput, TouchableOpacity, Button } from 'react-native';
 
 const IndividualListing = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.backButton} onPress={() => navigation.goBack()}>Back</Text>
-        <Image source={require('./images/PodcastVault.png')} style={styles.image} />
+      <View style={styles.backButtonContainer}>
+        <Button 
+          title="Back"
+          onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+          color="purple"
+        />
+      </View>     
+      <Image source={require('./images/PodcastVault.png')} style={styles.image} />
      
       <Text style={styles.title}>Podcast Vault</Text>
 
@@ -120,6 +126,11 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+
+  backButtonContainer: {
+    alignSelf: 'flex-start', // Aligns the filter button container to the start of the parent container
+    marginBottom: 10,
   },
 });
 
