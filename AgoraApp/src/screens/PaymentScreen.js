@@ -14,98 +14,121 @@ const PaymentPage = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
-        <Button 
-          title="Back"
-          onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
-          color="purple"
-        />      <Image source={require('./images/PodcastVault.png')} style={styles.image} />
-      <Text style={styles.title}>Podcast Vault</Text>
-      <Text style={styles.price}>$450.00</Text>
-      
-      <TouchableOpacity style={styles.applePayButton}>
-        <Text style={styles.applePayButtonText}>Pay</Text>
-      </TouchableOpacity>
-
-      <Text style={styles.separator}>───────── Or pay with your card ─────────</Text>
-
-      <View style={styles.form}>
-        <Text>Email</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Enter your email"
-          value={email}
-          onChangeText={setEmail}
-        />
-
-        <Text>Card Information</Text>
-        <View style={styles.cardInfoContainer}>
-          <TextInput
-            style={[styles.textInput, styles.cardNumberInput]}
-            placeholder="1234 4321 1234 4321"
-            value={cardNumber}
-            onChangeText={setCardNumber}
-            keyboardType="numeric"
-          />
-          <TextInput
-            style={[styles.textInput, styles.expiryInput]}
-            placeholder="MM/YY"
-            value={expiry}
-            onChangeText={setExpiry}
-            keyboardType="numeric"
-          />
-          <TextInput
-            style={[styles.textInput, styles.cvcInput]}
-            placeholder="CVC"
-            value={cvc}
-            onChangeText={setCvc}
-            keyboardType="numeric"
-            secureTextEntry
-          />
-        </View>
-
-        <Text>Country or Region</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Enter your country"
-          value={country}
-          onChangeText={setCountry}
-        />
-
-        <TouchableOpacity style={styles.payButton} onPress={handlePayment}>
-          <Text style={styles.payButtonText}>Pay $450.00</Text>
+    <View style={styles.outerContainer}>
+      <View style={styles.container}>
+          <View style={styles.backButtonContainer}>
+              <Button 
+                title="Back"
+                onPress={() => navigation.navigate('IndividualListing')}  // Use the navigation.navigate method
+                color="purple"
+              />
+          </View>   
+        <Image source={require('./images/PodcastVault.png')} style={styles.image} />
+        <Text style={styles.title}>Podcast Vault</Text>
+        <Text style={styles.price}>$450.00</Text>
+        
+        <TouchableOpacity style={styles.applePayButton}>
+          <Text style={styles.applePayButtonText}>Pay</Text>
         </TouchableOpacity>
+
+        <Text style={styles.separator}>──────── Or pay with your card ─────────</Text>
+
+        <View style={styles.form}>
+          <Text>Email</Text>
+          <TextInput
+            style={styles.textInput}
+            placeholder="Enter your email"
+            value={email}
+            onChangeText={setEmail}
+          />
+
+          <Text>Card Information</Text>
+          <View style={styles.cardInfoContainer}>
+            <TextInput
+              style={[styles.textInput, styles.cardNumberInput]}
+              placeholder="1234 4321 1234 4321"
+              value={cardNumber}
+              onChangeText={setCardNumber}
+              keyboardType="numeric"
+            />
+            <TextInput
+              style={[styles.textInput, styles.expiryInput]}
+              placeholder="MM/YY"
+              value={expiry}
+              onChangeText={setExpiry}
+              keyboardType="numeric"
+            />
+            <TextInput
+              style={[styles.textInput, styles.cvcInput]}
+              placeholder="CVC"
+              value={cvc}
+              onChangeText={setCvc}
+              keyboardType="numeric"
+              secureTextEntry
+            />
+          </View>
+
+          <Text>Country or Region</Text>
+          <TextInput
+            style={styles.textInput}
+            placeholder="Enter your country"
+            value={country}
+            onChangeText={setCountry}
+          />
+
+          <TouchableOpacity style={styles.payButton} onPress={handlePayment}>
+            <Text style={styles.payButtonText}>Pay $450.00</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  
+  
+  outerContainer: {
+    flex: 1,
+    paddingTop: 60,  // Add padding to shift content down
+    backgroundColor: 'white',
+  },
+
   container: {
     flex: 1,
-    padding: 20,
+    paddingHorizontal: 20,
     backgroundColor: 'white',
+    //marginTop: 30,
   },
   backButton: {
     fontSize: 24,
     color: 'black',
     alignSelf: 'flex-end',
     marginBottom: 10,
+    //transform: [{translateY: 70}],
+
+  // backButtonContainer: {
+  //     alignSelf: 'flex-start',  // Aligns the button container to the start (left) of the parent container
+  //     marginBottom: 10,
   },
   image: {
-    width: '100%',
-    height: 200,
+    width: '80%',
+    height: 160,
     borderRadius: 10,
     marginBottom: 20,
+    alignSelf: 'center',
+    
   },
   title: {
-    fontSize: 24,
+    paddingVertical:10,
+    fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 10,
   },
   price: {
-    fontSize: 24,
+    paddingVertical:10,
+    fontSize: 14,
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 20,
@@ -138,6 +161,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   cardInfoContainer: {
+    paddingVertical:10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 15,
@@ -158,12 +182,21 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     borderRadius: 10,
     alignItems: 'center',
+    marginTop: 25,
+    
   },
   payButtonText: {
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
   },
+
+  backButtonContainer: {
+    alignSelf: 'flex-start',  // Aligns the button container to the start (left) of the parent container
+    marginBottom: 10,
+  },
+
 });
 
 export default PaymentPage;
+
