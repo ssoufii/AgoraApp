@@ -61,7 +61,9 @@ return (
 
       <View style={styles.fourthContainer}> 
         <View style = {styles.listingPhotosContainer}>
-          <Image source={require('./images/PehonanBoardRoom.png')} style={styles.listingPhoto} />
+          <TouchableOpacity onPress={() => navigation.navigate('IndividualListing')}>
+            <Image source={require('./images/PehonanBoardRoom.png')} style={styles.listingPhoto} />
+          </TouchableOpacity>         
           <TextComponent text = "Pehonan Board Room"  style = {styles.descriptionWords}></TextComponent>
           <TextComponent text = "$350.00"  style = {styles.costWords}></TextComponent>
         </View>
@@ -71,12 +73,13 @@ return (
             <Image source={require('./images/PodcastVault.png')} style={styles.listingPhoto} />
           </TouchableOpacity>
 
-
           <TextComponent text = "Podcast Vault"  style = {styles.descriptionWords}></TextComponent>
           <TextComponent text = "$450.00"  style = {styles.costWords}></TextComponent>
         </View>
         <View style = {styles.listingPhotosContainer}>
-          <Image source={require('./images/HotDesk.png')} style={styles.listingPhoto} />
+          <TouchableOpacity onPress={() => navigation.navigate('IndividualListing')}>
+            <Image source={require('./images/HotDesk.png')} style={styles.listingPhoto} />
+          </TouchableOpacity>          
           <TextComponent text = "Hot Desk"  style = {styles.descriptionWords}></TextComponent>
           <TextComponent text = "$35.00"  style = {styles.costWords}></TextComponent>      
        </View>
@@ -89,17 +92,23 @@ return (
 
       <View style={styles.sixthContainer}>
       <View style = {styles.listingPhotosContainer}>
-          <Image source={require('./images/PehonanBoardRoom.png')} style={styles.listingPhoto} />
+          <TouchableOpacity onPress={() => navigation.navigate('IndividualListing')}>
+            <Image source={require('./images/PehonanBoardRoom.png')} style={styles.listingPhoto} />
+          </TouchableOpacity>         
           <TextComponent text = "Pehonan Board Room"  style = {styles.descriptionWords}></TextComponent>
           <TextComponent text = "$350.00"  style = {styles.costWords}></TextComponent>
         </View>
         <View style = {styles.listingPhotosContainer}>
-          <Image source={require('./images/PodcastVault.png')} style={styles.listingPhoto} />
+          <TouchableOpacity onPress={() => navigation.navigate('IndividualListing')}>
+            <Image source={require('./images/PodcastVault.png')} style={styles.listingPhoto} />
+          </TouchableOpacity>          
           <TextComponent text = "Podcast Vault"  style = {styles.descriptionWords}></TextComponent>
           <TextComponent text = "$40.00"  style = {styles.costWords}></TextComponent>
         </View>
         <View style = {styles.listingPhotosContainer}>
-          <Image source={require('./images/HotDesk.png')} style={styles.listingPhoto} />
+          <TouchableOpacity onPress={() => navigation.navigate('IndividualListing')}>
+            <Image source={require('./images/HotDesk.png')} style={styles.listingPhoto} />
+          </TouchableOpacity>           
           <TextComponent text = "Hot Desk"  style = {styles.descriptionWords}></TextComponent>
           <TextComponent text = "$35.00"  style = {styles.costWords}></TextComponent>      
        </View>
