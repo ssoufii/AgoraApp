@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Image, TextInput, TouchableOpacity } from 'react-native';
+import { Button, View, StyleSheet, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 
 const PaymentPage = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -15,8 +15,11 @@ const PaymentPage = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.backButton} onPress={() => navigation.goBack()}>X</Text>
-      <Image source={{ uri: 'https://via.placeholder.com/350x150' }} style={styles.image} />
+        <Button 
+          title="Back"
+          onPress={() => navigation.navigate('Home')}  // Use the navigation.navigate method
+          color="purple"
+        />      <Image source={require('./images/PodcastVault.png')} style={styles.image} />
       <Text style={styles.title}>Podcast Vault</Text>
       <Text style={styles.price}>$450.00</Text>
       

@@ -66,7 +66,12 @@ return (
           <TextComponent text = "$350.00"  style = {styles.costWords}></TextComponent>
         </View>
         <View style = {styles.listingPhotosContainer}>
-          <Image source={require('./images/PodcastVault.png')} style={styles.listingPhoto} />
+
+          <TouchableOpacity onPress={() => navigation.navigate('IndividualListing')}>
+            <Image source={require('./images/PodcastVault.png')} style={styles.listingPhoto} />
+          </TouchableOpacity>
+
+
           <TextComponent text = "Podcast Vault"  style = {styles.descriptionWords}></TextComponent>
           <TextComponent text = "$450.00"  style = {styles.costWords}></TextComponent>
         </View>
