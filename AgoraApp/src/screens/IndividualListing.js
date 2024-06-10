@@ -38,7 +38,7 @@ const IndividualListing = ({ navigation }) => {
         </View>
 
       </View>
-      <TouchableOpacity style={styles.bookButton} onPress={() => { /* Handle booking action */ }}>
+      <TouchableOpacity style={styles.bookButton} onPress={() => navigation.navigate('Payment')}>
         <Text style={styles.bookButtonText}>Book</Text>
       </TouchableOpacity>
     </View>
