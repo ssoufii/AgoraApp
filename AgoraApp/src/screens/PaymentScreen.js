@@ -31,7 +31,7 @@ const PaymentPage = ({ navigation }) => {
           <Text style={styles.applePayButtonText}>Pay</Text>
         </TouchableOpacity>
 
-        <Text style={styles.separator}>──────── Or pay with your card ─────────</Text>
+        <Text style={styles.separator}>Or pay with your card</Text>
 
         <View style={styles.form}>
           <Text>Email</Text>

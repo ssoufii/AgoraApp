@@ -1,5 +1,8 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaView, StyleSheet, View, Image, Text, TouchableOpacity, Dimensions} from 'react-native';
+
+// Define constants for screen width and height
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
 // Button component specific to HomeScreen, used for signup and login --> used to be Button and Button2, now simplified
 const Button = ({ children, onPress, style, textStyle }) => {
@@ -42,7 +45,7 @@ const HomeScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image source={require('./images/Agorawork.png')} style={styles.image} />
+        <Image source={require('./images/Agoralogo.png')} style={styles.image} />
       </View>
       <View style={[styles.section, styles.Words]}>
         <TextComponent text="AGORA WORK" style={styles.text2xl} />
@@ -72,7 +75,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     borderRadius: 100,
     position: 'absolute',
-    top: 100,
+    top: '6%',
     left: 50,
     width: 50,
     height: 50,
@@ -91,7 +94,7 @@ const styles = StyleSheet.create({
   },
   bottomWords: {
     transform: [{translateY: -120}],
-    flex: 0.2,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -99,10 +102,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     paddingHorizontal: 3,
+    top: '16%',
   },
   text5xl: {
     fontSize: 50,
     fontWeight: '500',
+    top: '20%',
   },
   button: {
     borderRadius: 10,
@@ -125,12 +130,15 @@ const styles = StyleSheet.create({
   },
 
   login: {
-    transform: [{translateY: -80}],
+    transform: [{translateY: -20}],
     height: 300,
     width: 200,
     alignItems: 'center',
     justifyContent: 'space-evenly',
+    top:'-5%',
+    
   },
 });
 
 export default HomeScreen;
+
